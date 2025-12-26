@@ -58,7 +58,7 @@ const Profile = () => {
             setError(error.response?.data?.message || 'An error occurred while uploading profile picture');
 
         } finally {
-            setLoading(false)
+            setUploading(false)
         }
     }
 
