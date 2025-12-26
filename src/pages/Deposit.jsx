@@ -64,18 +64,33 @@ const Deposit = () => {
 
 
 
+    // const fetchRecentTransactions = async () => {
+    //     try {
+    //         if (formData.accountNumber) {
+    //             const response = await apiService.getTransactions(formData.accountNumber, 0, 3);
+    //             if (response.data.statusCode === 200) {
+    //                 setRecentTransactions(response.data.data || []);
+    //             }
+    //         }
+    //     } catch (error) {
+    //         console.error('Error fetching recent transactions:', error);
+    //     }
+    // };
+
     const fetchRecentTransactions = async () => {
         try {
             if (formData.accountNumber) {
-                const response = await apiService.getTransactions(formData.accountNumber, 0, 3);
-                if (response.data.statusCode === 200) {
-                    setRecentTransactions(response.data.data || []);
+                const response = await apiService.getTransactionsByAccountNumber(formData.accountNumber);
+
+                if (Array.isArray(response.data)) {
+                    setRecentTransactions(response.data);
                 }
             }
         } catch (error) {
             console.error('Error fetching recent transactions:', error);
         }
     };
+
 
 
     const formatCurrency = (amount, currency = 'USD') => {
