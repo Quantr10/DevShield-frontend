@@ -1,5 +1,84 @@
-<img width="800" height="500" alt="transfer" src="https://github.com/user-attachments/assets/120d31d9-94ad-48f1-957e-d70c762fcfd1" />
-<img width="800" height="500" alt="profile" src="https://github.com/user-attachments/assets/f656721d-06f7-4073-a0f0-9708d34ca6ba" />
-<img width="800" height="500" alt="home" src="https://github.com/user-attachments/assets/0cc08ee4-41e0-4312-8da2-57b4ec36df1c" />
-<img width="800" height="500" alt="history" src="https://github.com/user-attachments/assets/162854df-966f-44bc-8478-4557dcdf5ed4" />
-<img width="800" height="500" alt="deposit" src="https://github.com/user-attachments/assets/831e7c66-bb0a-4305-95a9-d857137da8c5" />
+# DevShield (Frontend)
+
+React Single-Page Application (SPA) for the DevShield secure banking platform.  
+Provides a responsive UI with protected routes and real-time transaction feedback.
+
+> Backend Repository → https://github.com/Quantr10/DevShield-backend
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend:** React, JavaScript, HTML, CSS  
+**Backend:** Spring Boot, Spring Security, JWT, REST APIs  
+**Database:** MySQL  
+**DevOps:** Docker, GitHub Actions  
+**Cloud:** AWS S3  
+**Tools:** Git, Maven, npm 
+
+---
+
+## ✨ Features
+
+- Secure Deposit, Withdrawal, and Transfer APIs  
+- JWT Authentication & Role-based Authorization  
+- ACID-compliant transaction handling & audit logging  
+- React SPA with protected routes & real-time feedback  
+- SMTP email notifications (password reset, transaction alerts)  
+- Dockerized full-stack app with GitHub Actions CI/CD  
+- AWS S3 integration & cloud-ready deployment  
+
+---
+
+## ⚙️ Getting Started
+### Clone Repository
+
+```
+git clone https://github.com/quantr10/devshield-frontend.git
+cd devshield-frontend
+```
+### Environment Setup
+
+Copy the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+### Run with Docker
+```
+docker-compose up --build
+```
+Frontend runs at: http://localhost:3000
+
+### Run without Docker
+```
+npm install
+npm start
+```
+## 🔄 CI/CD Pipeline
+
+On every push to main:
+- Runs backend tests
+- Builds frontend
+- Builds Docker images
+- Ready for automated cloud deployment
+
+Configured in:
+
+```
+.github/workflows/deploy.yml
+```
+
+## ☁️ Cloud Integration
+
+- AWS S3 for secure file storage
+- Container-ready for AWS EC2 / ECS / Render / Railway
+- CI/CD prepared for zero-downtime deployment
+
+## 📸 Demo
+(Add screenshots or GIFs here)
+
+## 📄 License
+
+[MIT](https://choosealicense.com/licenses/mit/)
