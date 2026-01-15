@@ -3,7 +3,7 @@
 React Single-Page Application (SPA) for the DevShield secure banking platform.  
 Provides a responsive UI with protected routes and real-time transaction feedback.
 
-> Backend Repository → https://github.com/Quantr10/DevShield-backend
+> Backend Repository → https://github.com/quantr10/DevShield-backend
 
 ---
 
@@ -14,39 +14,38 @@ Provides a responsive UI with protected routes and real-time transaction feedbac
 **Database:** MySQL  
 **DevOps:** Docker, GitHub Actions  
 **Cloud:** AWS S3  
+**Deployment:** AWS EC2  
 **Tools:** Git, Maven, npm 
 
 ---
 
 ## ✨ Features
 
-- Secure Deposit, Withdrawal, and Transfer APIs  
-- JWT Authentication & Role-based Authorization  
-- ACID-compliant transaction handling & audit logging  
-- React SPA with protected routes & real-time feedback  
-- SMTP email notifications (password reset, transaction alerts)  
-- Dockerized full-stack app with GitHub Actions CI/CD  
-- AWS S3 integration & cloud-ready deployment  
+- JWT-protected authentication flow  
+- Secure customer dashboard  
+- Deposit, Withdrawal, and Transfer forms  
+- Protected routes & role-based UI access  
+- Real-time API integration with backend 
 
 ---
 
 ## ⚙️ Getting Started
 ### Clone Repository
 
-```
-git clone https://github.com/quantr10/devshield-frontend.git
+```bash
+git clone https://github.com/quantr10/DevShield-frontend.git
 cd devshield-frontend
 ```
 ### Environment Setup
-
 Copy the example environment file:
 
 ```bash
 cp .env.example .env
 ```
+Fill in required credentials in .env.
 
 ### Run with Docker
-```
+```bash
 docker-compose up --build
 ```
 Frontend runs at: http://localhost:3000
@@ -56,29 +55,12 @@ Frontend runs at: http://localhost:3000
 npm install
 npm start
 ```
-## 🔄 CI/CD Pipeline
 
-On every push to main:
-- Runs backend tests
-- Builds frontend
-- Builds Docker images
-- Ready for automated cloud deployment
-
-Configured in:
-
-```
-.github/workflows/deploy.yml
-```
-
-## ☁️ Cloud Integration
-
-- AWS S3 for secure file storage
-- Container-ready for AWS EC2 / ECS / Render / Railway
-- CI/CD prepared for zero-downtime deployment
-
+---
 ## 📸 Demo
 (Add screenshots or GIFs here)
 
+---
 ## 📄 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
