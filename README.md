@@ -1,42 +1,9 @@
-# DevShield
+# DevShield (Frontend)
 
-DevShield is a **secure full-stack banking platform** featuring real financial transaction flows, enterprise-grade security, and automated deployment pipelines.
+React Single-Page Application (SPA) for the DevShield secure banking platform.  
+Provides a responsive UI with protected routes and real-time transaction feedback.
 
-Built with **Spring Boot**, **React**, **MySQL**, and **Docker**, DevShield demonstrates secure financial APIs, authentication & authorization, CI/CD automation, and cloud deployment — mirroring real-world fintech systems.
-
----
-
-## ✨ Features
-
-### Core Banking
-- Deposit, Withdrawal, and Transfer APIs  
-- ACID-compliant transaction handling  
-- Customer & Auditor role separation  
-- Full audit logging of all actions  
-
-### Security
-- Spring Security authentication  
-- JWT-based stateless authorization  
-- Password encryption with BCrypt  
-- Protected API routes  
-
-### Frontend
-- React Single-Page Application (SPA)  
-- JWT-protected pages  
-- Responsive UI  
-- Real-time transaction feedback  
-
-### Notifications
-- SMTP email service  
-- Password reset emails  
-- Transaction confirmation alerts  
-
-### DevOps & Cloud
-- Dockerized frontend & backend  
-- GitHub Actions CI/CD  
-- Automated build & test pipeline  
-- AWS S3 file storage integration  
-- Ready for zero-downtime deployment  
+> Backend Repository → https://github.com/Quantr10/DevShield-backend
 
 ---
 
@@ -47,49 +14,48 @@ Built with **Spring Boot**, **React**, **MySQL**, and **Docker**, DevShield demo
 **Database:** MySQL  
 **DevOps:** Docker, GitHub Actions  
 **Cloud:** AWS S3  
-**Tools:** Git, Maven, npm  
+**Tools:** Git, Maven, npm 
+
+---
+
+## ✨ Features
+
+- Secure Deposit, Withdrawal, and Transfer APIs  
+- JWT Authentication & Role-based Authorization  
+- ACID-compliant transaction handling & audit logging  
+- React SPA with protected routes & real-time feedback  
+- SMTP email notifications (password reset, transaction alerts)  
+- Dockerized full-stack app with GitHub Actions CI/CD  
+- AWS S3 integration & cloud-ready deployment  
 
 ---
 
 ## ⚙️ Getting Started
-
 ### Clone Repository
 
-```bash
-git clone https://github.com/quantr10/DevShield.git
-cd DevShield
 ```
-
+git clone https://github.com/quantr10/devshield-frontend.git
+cd devshield-frontend
+```
 ### Environment Setup
+
 Copy the example environment file:
 
-```
+```bash
 cp .env.example .env
 ```
-Fill in required credentials in .env.
 
 ### Run with Docker
 ```
 docker-compose up --build
 ```
-Access the application:
-#### Frontend: http://localhost:3000
-#### Backend: http://localhost:8080
+Frontend runs at: http://localhost:3000
 
 ### Run without Docker
-#### Backend
 ```
-cd backend
-mvn spring-boot:run
-```
-
-#### Frontend
-```
-cd frontend
 npm install
 npm start
 ```
-
 ## 🔄 CI/CD Pipeline
 
 On every push to main:
@@ -116,4 +82,3 @@ Configured in:
 ## 📄 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
